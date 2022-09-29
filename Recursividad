@@ -16,7 +16,7 @@ def SumaR(numeros, objetivo, sumas=[]):
 
     SumaR(numeros[1:], objetivo, sumas + [numeros[0]])
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     numeros = [2, 2, 2, 2, 2, 10]
     objetivo = 10
     SumaR(numeros, objetivo)
