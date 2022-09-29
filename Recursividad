@@ -1,0 +1,22 @@
+def SumaR(numeros, objetivo, sumas=[]):
+
+    # Primero Comprobamos si la suma es igual al numero objetivo Z
+
+    s = sum(sumas)
+    if s == objetivo:
+        print("Suma Realizada para alacanzar objetivo z (%s)=%s" % (sumas, objetivo))
+
+    # Realizamos una comprobacion para si superamos el numero objetivo z, y se devuelve pues la sumatoria ya se excede
+    if s >= objetivo:
+        return
+
+    # De lo contrario hacemos una comprobacion de los numeros restantes ciclo for
+    #for i in range(len(numeros)):
+        #n = numeros[i]
+
+    SumaR(numeros[1:], objetivo, sumas + [numeros[0]])
+
+if _name_ == "_main_":
+    numeros = [2, 2, 2, 2, 2, 10]
+    objetivo = 10
+    SumaR(numeros, objetivo)
